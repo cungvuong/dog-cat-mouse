@@ -1,7 +1,17 @@
-function Dog() {
+var chalk = require('chalk');
+function Dog(name) {
+	this.name = name;
 	this.stomach = [];
 }
 
-Dog.prototype.eat() = function(Cat) {
+Dog.prototype.eat = function(Cat) {
 	this.stomach.push(Cat);
 }
+
+Dog.prototype.sayHi = function () {
+	// body...
+	console.log("Hi i am a dog" + chalk.blue("OK"));
+}
+
+
+module.exports = Dog;
